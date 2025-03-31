@@ -1,6 +1,8 @@
 
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 interface TeamMemberProps {
   name: string;
@@ -24,7 +26,10 @@ const TeamMember = ({ name, role, imageSrc }: TeamMemberProps) => {
         </AvatarFallback>
       </Avatar>
       <h3 className="text-xl font-semibold text-[#0A2463] mb-1">{name}</h3>
-      {role && <p className="text-gray-600 text-center">{role}</p>}
+      {role && <p className="text-gray-600 text-center mb-4">{role}</p>}
+      <Button variant="outline" className="mt-2 border-[#0A2463] text-[#0A2463] hover:bg-[#0A2463] hover:text-white">
+        Learn More <ArrowRight className="ml-1" size={16} />
+      </Button>
     </div>
   );
 };

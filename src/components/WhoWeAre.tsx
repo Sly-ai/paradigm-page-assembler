@@ -20,11 +20,11 @@ const WhoWeAre = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <TeamMember 
             name="Ebenezer Tesfaye" 
-            role="Founder & Chief Strategy Officer" 
+            role="Director of Digital Innovation and Technology" 
           />
           <TeamMember 
             name="Natnael Melaku" 
-            role="Head of Business Development" 
+            role="Director of Business Development and Partnership" 
           />
           <TeamMember 
             name="Sosena Samson" 
