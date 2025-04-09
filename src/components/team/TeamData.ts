@@ -1,4 +1,3 @@
-
 import { TeamMember } from "./TeamMemberTypes";
 
 // Type-safe team member data
@@ -99,12 +98,86 @@ export const teamMembersData: Record<string, TeamMember> = {
       }
     ]
   },
-  // Placeholders for other team members
+  // Complete profile for Ebenezer
   "ebenezer-tesfaye": {
-    name: "Ebenezer Tesfaye",
+    name: "Ebenezer Tesfaye Beyene",
     role: "Director of Digital Innovation and Technology",
-    title: "Digital Innovation & Technology Consultant",
-    about: "Profile details to be added."
+    title: "Certified Product & Project Manager",
+    tagline: "Driving growth through user-centric digital solutions",
+    about: "Certified Product Leader with 10+ years' experience in FMCG and digital transformation. Spearheaded award-winning platforms at HEINEKEN Ethiopia and Kifiya Financial Technologies, delivering measurable impact through AI-driven solutions and process innovation. Combines technical expertise in Salesforce, SAP, and data analytics with strategic business acumen.",
+    expertise: [
+      {
+        title: "Product Leadership",
+        description: "Developing and managing digital products from conception to market success.",
+        points: [
+          "B2B/B2C platform development",
+          "Cross-functional team leadership",
+          "Agile product roadmapping"
+        ]
+      },
+      {
+        title: "Data-Driven Optimization",
+        description: "Leveraging data to optimize product performance and business outcomes.",
+        points: [
+          "AI/ML implementation (Sales Cloud Einstein)",
+          "Predictive analytics (Pendo, Power BI)",
+          "Process efficiency gains"
+        ]
+      },
+      {
+        title: "Digital Transformation",
+        description: "Guiding organizations through technological evolution and systems integration.",
+        points: [
+          "Salesforce Commerce Cloud",
+          "SAP S/4HANA integration",
+          "Payment system innovation"
+        ]
+      },
+      {
+        title: "Strategic Analysis",
+        description: "Applying analytical frameworks to drive business strategy and growth.",
+        points: [
+          "SWOT/PESTEL frameworks",
+          "System thinking methodologies",
+          "Market penetration strategies"
+        ]
+      }
+    ],
+    achievements: [
+      {
+        title: "HEINEKEN Ethiopia Digital Transformation",
+        points: [
+          "30% sales revenue increase via Distributor Management System",
+          "11% pandemic revenue recovery through B2B platform launch",
+          "Successfully integrated SAP with Salesforce for streamlined operations"
+        ]
+      },
+      {
+        title: "Kifiya Financial Technologies Innovation",
+        points: [
+          "30% SME liquidity boost via invoice discounting platform",
+          "20% collection efficiency gain with AI-driven reminders",
+          "Launched mobile payment platform with 98% uptime performance"
+        ]
+      },
+      {
+        title: "Ablaze Labs Market Entry",
+        points: [
+          "15% Q1 market penetration for gaming platform",
+          "Developed user acquisition strategy resulting in 22% month-over-month growth",
+          "Implemented analytics framework driving 18% conversion optimization"
+        ]
+      },
+      {
+        title: "Superpower Revenue Growth",
+        points: [
+          "40% revenue growth through strategic partnerships",
+          "Established B2B partnership program with 15 enterprise clients",
+          "Optimized product roadmap based on real-time user feedback"
+        ]
+      }
+    ],
+    philosophy: "Technology should solve real problems – my approach blends data rigor with human-centered design to create solutions that scale."
   },
   "natnael-melaku": {
     name: "Natnael Melaku",
