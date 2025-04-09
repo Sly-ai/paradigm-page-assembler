@@ -30,8 +30,12 @@ const TeamMemberDetail = () => {
       <Navbar />
       <main className="flex-1 bg-gray-50">
         <TeamMemberHeader member={member} />
-        <ExpertiseSection expertise={member.expertise || []} />
-        <AchievementsSection achievements={member.achievements || []} />
+        {member.expertise && member.expertise.length > 0 && (
+          <ExpertiseSection expertise={member.expertise} />
+        )}
+        {member.achievements && member.achievements.length > 0 && (
+          <AchievementsSection achievements={member.achievements} />
+        )}
       </main>
       <Footer />
     </div>
