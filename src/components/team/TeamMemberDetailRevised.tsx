@@ -1,8 +1,7 @@
-
 import React from "react";
 import { TeamMember } from "./TeamMemberTypes";
 import { Button } from "@/components/ui/button";
-import { Target, BarChart, Globe, Brain, Rocket } from "lucide-react";
+import { Target, BarChart, Globe, Brain, Rocket, ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Accordion, 
@@ -39,6 +38,17 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
 
   return (
     <div className="bg-white">
+      {/* Back button */}
+      <div className="container mx-auto px-4 pt-24 pb-4">
+        <Link 
+          to="/" 
+          className="inline-flex items-center text-[#0A2463] hover:text-[#3E92CC] transition-colors"
+        >
+          <ArrowLeft className="mr-2" size={20} />
+          Back to Home
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-16">
         <div className="container mx-auto px-4">
@@ -243,7 +253,7 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
             <Button 
               className="bg-[#0A2463] hover:bg-[#051a47] transition-colors w-full sm:w-auto"
               size="lg"
-              onClick={() => window.location.href = "#contact"}
+              onClick={() => window.location.href = "/#contact"}
             >
               {isEbenezer ? "Discuss Innovation Projects" : "Discuss Your Project"}
             </Button>
@@ -252,9 +262,18 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
               variant="outline" 
               className="border-[#0A2463] text-[#0A2463] hover:bg-[#0A2463] hover:text-white w-full sm:w-auto"
               size="lg"
-              onClick={() => window.location.href = "#portfolio"}
+              onClick={() => window.location.href = "/#portfolio"}
             >
               {isEbenezer ? "View Tech Portfolio" : "View Case Studies"}
+            </Button>
+            
+            <Button 
+              variant="ghost" 
+              className="text-[#0A2463] hover:bg-gray-100 w-full sm:w-auto"
+              size="lg"
+              asChild
+            >
+              <Link to="/">Back to Team</Link>
             </Button>
           </div>
         </div>
