@@ -15,6 +15,9 @@ export interface TeamMember {
   role: string;
   title: string;
   about: string;
+  tagline?: string;
   expertise?: ExpertiseItem[];
   achievements?: AchievementItem[];
+  philosophy?: string;
+  imageSrc?: string;
 }

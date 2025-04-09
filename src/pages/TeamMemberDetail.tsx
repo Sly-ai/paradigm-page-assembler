@@ -4,9 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { teamMembersData } from "@/components/team/TeamData";
-import TeamMemberHeader from "@/components/team/TeamMemberHeader";
-import ExpertiseSection from "@/components/team/ExpertiseSection";
-import AchievementsSection from "@/components/team/AchievementsSection";
+import TeamMemberDetailRevised from "@/components/team/TeamMemberDetailRevised";
 import NotFoundMessage from "@/components/team/NotFoundMessage";
 
 const TeamMemberDetail = () => {
@@ -25,17 +23,27 @@ const TeamMemberDetail = () => {
     );
   }
 
+  // Set page title dynamically
+  React.useEffect(() => {
+    document.title = `${member.name} | Marketing Strategy & Growth Consultant`;
+    
+    // Optional: Set meta description for SEO
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 
+        'Marketing strategy consultant specializing in brand launches, rebranding, and market expansion with proven results across Telecom, FMCG and Real Estate sectors.');
+    }
+    
+    return () => {
+      document.title = 'Paradigm Advisory'; // Reset title on unmount
+    };
+  }, [member.name]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 bg-gray-50">
-        <TeamMemberHeader member={member} />
-        {member.expertise && member.expertise.length > 0 && (
-          <ExpertiseSection expertise={member.expertise} />
-        )}
-        {member.achievements && member.achievements.length > 0 && (
-          <AchievementsSection achievements={member.achievements} />
-        )}
+      <main className="flex-1">
+        <TeamMemberDetailRevised member={member} />
       </main>
       <Footer />
     </div>
