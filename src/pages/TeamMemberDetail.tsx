@@ -7,8 +7,29 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-// Team member data
-const teamMembersData = {
+// Define interfaces for team member data structure
+interface ExpertiseItem {
+  title: string;
+  description: string;
+  points: string[];
+}
+
+interface AchievementItem {
+  title: string;
+  points: string[];
+}
+
+interface TeamMember {
+  name: string;
+  role: string;
+  title: string;
+  about: string;
+  expertise?: ExpertiseItem[];
+  achievements?: AchievementItem[];
+}
+
+// Type-safe team member data
+const teamMembersData: Record<string, TeamMember> = {
   "sosena-samson": {
     name: "Sosena Samson",
     role: "Director of Marketing & Branding",
@@ -168,8 +189,8 @@ const TeamMemberDetail = () => {
           </div>
         </div>
         
-        {/* Core expertise section */}
-        {member.expertise && (
+        {/* Core expertise section - only show if expertise data exists */}
+        {member.expertise && member.expertise.length > 0 && (
           <div className="py-12 bg-white">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
@@ -196,8 +217,8 @@ const TeamMemberDetail = () => {
           </div>
         )}
         
-        {/* Key projects section */}
-        {member.achievements && (
+        {/* Key projects section - only show if achievements data exists */}
+        {member.achievements && member.achievements.length > 0 && (
           <div className="py-12 bg-gray-50">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
