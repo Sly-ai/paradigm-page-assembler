@@ -1,8 +1,18 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Hero = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  
+  // Create proper link based on whether we're on the homepage or not
+  const getHref = (sectionId: string) => {
+    return isHomePage ? `#${sectionId}` : `/#${sectionId}`;
+  };
+  
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
@@ -18,7 +28,7 @@ const Hero = () => {
             and behavioral economics principles.
           </p>
           <Button className="bg-[#0A2463] hover:bg-[#051a47] text-white px-8 py-6 text-lg rounded-md">
-            Learn How We Can Help
+            <a href={getHref("services")}>Learn How We Can Help</a>
           </Button>
         </div>
       </div>
