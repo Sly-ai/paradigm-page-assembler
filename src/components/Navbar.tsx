@@ -1,11 +1,13 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import ContactModal from "@/components/ContactModal";
 
 const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const [contactModalOpen, setContactModalOpen] = useState(false);
   
   // Create proper links based on whether we're on the homepage or not
   const getHref = (sectionId: string) => {
@@ -36,9 +38,18 @@ const Navbar = () => {
           </a>
         </div>
         
-        <Button className="bg-[#0A2463] hover:bg-[#051a47] transition-colors">
-          <Link to={getHref("contact")} className="text-white">Get in Touch</Link>
+        <Button 
+          className="bg-[#0A2463] hover:bg-[#051a47] transition-colors"
+          onClick={() => setContactModalOpen(true)}
+        >
+          Get in Touch
         </Button>
+
+        {/* Contact Modal */}
+        <ContactModal 
+          open={contactModalOpen}
+          onOpenChange={setContactModalOpen}
+        />
       </div>
     </nav>
   );
