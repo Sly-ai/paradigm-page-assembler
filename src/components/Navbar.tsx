@@ -16,14 +16,14 @@ const Navbar = () => {
   
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
+      <div className="container mx-auto px-4 py-4 flex items-center">
+        <div className="mr-auto">
           <Link to="/" className="text-xl font-bold text-navy-900">
             <span className="text-[#0A2463]">Paradigm</span> Advisory
           </Link>
         </div>
         
-        <div className="hidden md:flex space-x-6 text-sm font-medium">
+        <div className="hidden md:flex justify-center flex-1 space-x-12 text-sm font-medium">
           <a href={getHref("about")} className="text-gray-700 hover:text-[#0A2463] transition-colors">
             About
           </a>
@@ -38,12 +38,14 @@ const Navbar = () => {
           </a>
         </div>
         
-        <Button 
-          className="bg-[#0A2463] hover:bg-[#051a47] transition-colors"
-          onClick={() => setContactModalOpen(true)}
-        >
-          Get in Touch
-        </Button>
+        <div className="ml-auto">
+          <Button 
+            className="bg-[#0A2463] hover:bg-[#051a47] transition-colors"
+            onClick={() => setContactModalOpen(true)}
+          >
+            Get in Touch
+          </Button>
+        </div>
 
         {/* Contact Modal */}
         <ContactModal 
