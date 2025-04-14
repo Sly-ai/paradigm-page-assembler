@@ -1,4 +1,3 @@
-
 import { TeamMember } from "./TeamMemberTypes";
 
 // Type-safe team member data
@@ -271,5 +270,97 @@ export const teamMembersData: Record<string, TeamMember> = {
       }
     ],
     philosophy: "Success in today's interconnected world requires not just legal or business expertise in isolation, but the ability to navigate their intersection with diplomacy, cultural intelligence, and strategic foresight."
+  },
+  "amanuel-melaku": {
+    name: "Amanuel Melaku",
+    role: "Co-founder & Lead – Behavioural Marketing and Customer Insights",
+    title: "Behavioral Marketing & Consumer Psychology Specialist",
+    tagline: "Transforming consumer insights into strategic business advantage",
+    about: "Amanuel Melaku is a seasoned business development and marketing strategist with deep expertise in behavioral marketing and consumer psychology. He holds a Bachelor's degree in Marketing Management and a Master's degree in Social Psychology from Addis Ababa University. With a rich background spanning fintech, tech startups, and consulting, Amanuel has a proven track record of driving customer engagement, sales growth, and brand visibility. His strategic approach blends marketing with insights from social psychology, allowing him to craft compelling, value-driven customer experiences.",
+    expertise: [
+      {
+        title: "Behavioral Marketing Strategy",
+        description: "Designing marketing strategies rooted in behavioral science principles.",
+        points: [
+          "Behavioral economics application in marketing",
+          "Psychological triggers and persuasion techniques",
+          "Decision-making pattern analysis",
+          "Value proposition alignment with psychological needs",
+          "Cognitive bias identification and leveraging"
+        ]
+      },
+      {
+        title: "Qualitative Consumer Research",
+        description: "Conducting qualitative research to uncover consumer motivations and behaviors.",
+        points: [
+          "In-depth customer interviews and focus groups",
+          "Ethnographic research methods",
+          "Journey mapping and experience analysis",
+          "Motivation and pain point identification",
+          "Cultural and contextual influence assessment"
+        ]
+      },
+      {
+        title: "Communication Optimization",
+        description: "Enhancing communication strategies through evidence-based psychological insights.",
+        points: [
+          "Messaging framework development",
+          "Storytelling and narrative construction",
+          "Visual and verbal cue optimization",
+          "Emotional resonance mapping",
+          "Cross-cultural communication adaptation"
+        ]
+      },
+      {
+        title: "Customer Experience Design",
+        description: "Creating memorable customer experiences based on psychological principles.",
+        points: [
+          "Behavioral touchpoint optimization",
+          "Service delivery enhancement",
+          "Loyalty program psychological design",
+          "Customer feedback integration systems",
+          "Behavioral change implementation"
+        ]
+      }
+    ],
+    achievements: [
+      {
+        title: "Fintech Customer Acquisition Strategy",
+        points: [
+          "Developed behavioral marketing strategy increasing customer acquisition by 45%",
+          "Redesigned onboarding experience reducing abandonment rate by 30%",
+          "Implemented psychological triggers increasing customer referrals by 60%",
+          "Created behavioral segmentation model improving campaign targeting efficiency"
+        ]
+      },
+      {
+        title: "E-commerce Conversion Optimization",
+        points: [
+          "Applied behavioral economics principles to increase checkout completion by 35%",
+          "Redesigned product descriptions based on psychological triggers, boosting sales by 28%",
+          "Implemented social proof mechanisms increasing new customer conversion by 40%",
+          "Created urgency-based marketing campaigns that improved seasonal sales by 53%"
+        ]
+      },
+      {
+        title: "Telecommunications Customer Retention",
+        points: [
+          "Designed loyalty program based on behavioral psychology principles, reducing churn by 25%",
+          "Developed communication strategy that increased customer satisfaction scores by 38%",
+          "Created customer feedback loops that improved service delivery and reduced complaints",
+          "Implemented behavioral incentives that increased premium service adoption by 42%"
+        ]
+      },
+      {
+        title: "Financial Services Customer Research",
+        points: [
+          "Led qualitative research uncovering key emotional drivers in financial decision-making",
+          "Developed customer segmentation model based on psychological profiles and behaviors",
+          "Created financial education program aligned with behavioral change principles",
+          "Advised on service design improvements based on customer psychology insights"
+        ]
+      }
+    ],
+    philosophy: "Understanding the 'why' behind customer behaviors is the key to creating meaningful connections and sustainable growth. True marketing success comes from aligning business objectives with genuine human needs and motivations."
   }
 };
