@@ -1,3 +1,4 @@
+
 import { TeamMember } from "./TeamMemberTypes";
 
 // Type-safe team member data
@@ -180,9 +181,95 @@ export const teamMembersData: Record<string, TeamMember> = {
     philosophy: "Technology should solve real problems – my approach blends data rigor with human-centered design to create solutions that scale."
   },
   "natnael-melaku": {
-    name: "Natnael Melaku",
+    name: "Natnael Melaku Kokeb",
     role: "Director of Business Development and Partnership",
-    title: "Business Development & Partnerships Consultant",
-    about: "Profile details to be added."
+    title: "Business & Legal Strategist",
+    tagline: "Driving Impact at the Crossroads of Business, Policy, and Innovation",
+    about: "Natnael Melaku Kokeb is a forward-thinking legal and business strategist with a proven track record of delivering results in high-stakes environments. With over a decade of experience spanning law, fintech, international development, and trade diplomacy, experienced in leading organizations to foster investment, strengthen bilateral trade relations, and deliver member value.",
+    expertise: [
+      {
+        title: "Leadership & Governance",
+        description: "Overseeing operations, financial management, and stakeholder engagement while shaping strategic agendas.",
+        points: [
+          "Strategic organizational leadership",
+          "Government and private sector liaison",
+          "Financial management and oversight",
+          "Stakeholder relationship management",
+          "National and international representation"
+        ]
+      },
+      {
+        title: "Innovation & Entrepreneurship",
+        description: "Bringing innovative solutions to underserved markets and scaling venture impact.",
+        points: [
+          "Fintech solution development",
+          "Grant acquisition and management",
+          "Investor relationship cultivation",
+          "Market entry strategy",
+          "Scaling business operations"
+        ]
+      },
+      {
+        title: "Policy & Legal Advisory",
+        description: "Providing expert guidance on regulatory frameworks, governance, and institutional reforms.",
+        points: [
+          "Election law and political governance",
+          "Regulatory due diligence",
+          "Investment advisory services",
+          "Public-private legal frameworks",
+          "Institutional reform implementation"
+        ]
+      },
+      {
+        title: "Global Networks & Influence",
+        description: "Leveraging international connections to promote cross-border collaboration and market entry.",
+        points: [
+          "Cross-border business facilitation",
+          "International market entry support",
+          "Global advisory leadership",
+          "Trade diplomacy and negotiation",
+          "Network development and management"
+        ]
+      }
+    ],
+    achievements: [
+      {
+        title: "AmCham Ethiopia Leadership",
+        points: [
+          "Successfully leading daily operations and financial management",
+          "Established key relationships with government bodies and foreign missions",
+          "Effectively represented member interests at national and international levels",
+          "Shaped the Chamber's strategic agenda for maximum impact"
+        ]
+      },
+      {
+        title: "Fintech Innovation",
+        points: [
+          "Co-founded Axiom Financial Technologies S.C. for underserved markets",
+          "Secured competitive UNDP COVID-19 response grant",
+          "Cultivated investor relationships to scale venture impact",
+          "Developed innovative financial solutions for underbanked populations"
+        ]
+      },
+      {
+        title: "Legal & Policy Impact",
+        points: [
+          "Advised National Election Board of Ethiopia on critical reforms",
+          "Contributed to regulatory frameworks with Mesfin Tafesse & Associates",
+          "Collaborated with the Clinton Foundation on impactful initiatives",
+          "Supported the World Bank's Scaling Solar Program implementation"
+        ]
+      },
+      {
+        title: "Global Recognition & Leadership",
+        points: [
+          "Selected as a prestigious Chevening Scholar",
+          "Appointed as Mandela Washington Fellow",
+          "Serving as Global Advisor to the Global Chamber",
+          "Active member of the Chartered Management Institute (CMI)"
+        ]
+      }
+    ],
+    philosophy: "Success in today's interconnected world requires not just legal or business expertise in isolation, but the ability to navigate their intersection with diplomacy, cultural intelligence, and strategic foresight."
   }
 };
