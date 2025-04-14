@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
+import ScheduleCallModal from "./ScheduleCallModal";
 
 const ContactCTA = () => {
   return (
@@ -20,9 +21,12 @@ const ContactCTA = () => {
             <Button className="bg-white text-[#0A2463] hover:bg-gray-100 w-full md:w-auto">
               <Mail className="mr-2 h-4 w-4" /> Email Us
             </Button>
-            <Button className="bg-[#3E92CC] hover:bg-[#2d7eb3] border-none w-full md:w-auto">
-              <Phone className="mr-2 h-4 w-4" /> Schedule a Call
-            </Button>
+            
+            <ScheduleCallModal>
+              <Button className="bg-[#3E92CC] hover:bg-[#2d7eb3] border-none w-full md:w-auto">
+                <Phone className="mr-2 h-4 w-4" /> Schedule a Call
+              </Button>
+            </ScheduleCallModal>
           </div>
           
           <div className="text-sm opacity-80">
