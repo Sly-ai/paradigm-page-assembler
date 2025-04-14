@@ -10,6 +10,12 @@ export interface AchievementItem {
   points: string[];
 }
 
+export interface ContactInfo {
+  location?: string;
+  email?: string;
+  phone?: string;
+}
+
 export interface TeamMember {
   name: string;
   role: string;
@@ -20,4 +26,8 @@ export interface TeamMember {
   achievements?: AchievementItem[];
   philosophy?: string;
   imageSrc?: string;
+  contact?: ContactInfo;
+  education?: string[];
+  certifications?: string[];
+  keyStrengths?: string[];
 }

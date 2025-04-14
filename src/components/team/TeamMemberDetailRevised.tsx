@@ -1,7 +1,8 @@
+
 import React from "react";
 import { TeamMember } from "./TeamMemberTypes";
 import { Button } from "@/components/ui/button";
-import { Target, BarChart, Globe, Brain, Rocket, ArrowLeft } from "lucide-react";
+import { Target, BarChart, Globe, Brain, Rocket, ArrowLeft, MapPin, Mail, Phone, Award, GraduationCap, Certificate } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Accordion, 
@@ -11,6 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import TechnicalProficienciesSection from "./TechnicalProficienciesSection";
+import { Badge } from "@/components/ui/badge";
 
 interface TeamMemberDetailRevisedProps {
   member: TeamMember;
@@ -28,6 +30,7 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
 
   // If the member is Ebenezer, we'll show his technical proficiencies
   const isEbenezer = member.name.includes("Ebenezer");
+  const isAmanuel = member.name.includes("Amanuel");
   
   // Tech skills for Ebenezer
   const techSkills = {
@@ -69,6 +72,30 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
               <p className="text-lg text-gray-700 italic mb-6">
                 {member.tagline || "Transforming brands through data-driven marketing strategies"}
               </p>
+
+              {/* Contact Information - Show for Amanuel */}
+              {isAmanuel && member.contact && (
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
+                  {member.contact.location && (
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <MapPin size={16} className="text-[#3E92CC]" />
+                      <span>{member.contact.location}</span>
+                    </div>
+                  )}
+                  {member.contact.email && (
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Mail size={16} className="text-[#3E92CC]" />
+                      <a href={`mailto:${member.contact.email}`} className="hover:text-[#3E92CC]">{member.contact.email}</a>
+                    </div>
+                  )}
+                  {member.contact.phone && (
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Phone size={16} className="text-[#3E92CC]" />
+                      <a href={`tel:${member.contact.phone}`} className="hover:text-[#3E92CC]">{member.contact.phone}</a>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -115,6 +142,14 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
                       <h3 className="font-medium">Strategic Thinking</h3>
                     </div>
                   </>
+                ) : isAmanuel && member.keyStrengths ? (
+                  <div className="col-span-2 flex flex-wrap gap-2">
+                    {member.keyStrengths.map((strength, index) => (
+                      <Badge key={index} className="bg-[#3E92CC] hover:bg-[#0A2463] text-white py-1.5 px-3 text-sm">
+                        {strength}
+                      </Badge>
+                    ))}
+                  </div>
                 ) : (
                   // Original icons for Sosena and others
                   <>
@@ -149,6 +184,53 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
           </div>
         </div>
       </section>
+
+      {/* Education & Certifications Section - Only for Amanuel */}
+      {isAmanuel && (member.education || member.certifications) && (
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl font-bold text-[#0A2463] mb-8 pb-2 border-b">Education & Certifications</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {member.education && (
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <GraduationCap size={24} className="text-[#3E92CC] mr-3" />
+                      <h3 className="text-xl font-semibold text-[#0A2463]">Education</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {member.education.map((item, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#3E92CC] mt-2 mr-2"></span>
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {member.certifications && (
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <Certificate size={24} className="text-[#3E92CC] mr-3" />
+                      <h3 className="text-xl font-semibold text-[#0A2463]">Certifications</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {member.certifications.map((item, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#3E92CC] mt-2 mr-2"></span>
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Core Expertise Section */}
       <section className="py-12 bg-gray-50">
@@ -255,7 +337,7 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
               size="lg"
               onClick={() => window.location.href = "/#contact"}
             >
-              {isEbenezer ? "Discuss Innovation Projects" : "Discuss Your Project"}
+              {isEbenezer ? "Discuss Innovation Projects" : isAmanuel ? "Discuss Behavioral Marketing" : "Discuss Your Project"}
             </Button>
             
             <Button 
@@ -264,7 +346,7 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
               size="lg"
               onClick={() => window.location.href = "/#portfolio"}
             >
-              {isEbenezer ? "View Tech Portfolio" : "View Case Studies"}
+              {isEbenezer ? "View Tech Portfolio" : isAmanuel ? "View Case Studies" : "View Case Studies"}
             </Button>
             
             <Button 

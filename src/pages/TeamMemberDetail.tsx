@@ -35,6 +35,15 @@ const TeamMemberDetail = () => {
         metaDescription.setAttribute('content', 
           'Award-winning product leader specializing in digital transformation, B2B platforms, and AI-driven solutions with proven success across FMCG and FinTech sectors.');
       }
+    } else if (member.name.includes("Amanuel")) {
+      document.title = `${member.name} | Behavioral Marketing & Social Psychology Specialist`;
+      
+      // Set meta description for SEO
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 
+          'Business development and marketing strategist with expertise in behavioral marketing, consumer psychology, and data-driven growth strategies.');
+      }
     } else {
       document.title = `${member.name} | Marketing Strategy & Growth Consultant`;
       

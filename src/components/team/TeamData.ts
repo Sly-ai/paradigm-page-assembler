@@ -1,3 +1,4 @@
+
 import { TeamMember } from "./TeamMemberTypes";
 
 // Type-safe team member data
@@ -274,9 +275,14 @@ export const teamMembersData: Record<string, TeamMember> = {
   "amanuel-melaku": {
     name: "Amanuel Melaku",
     role: "Co-founder & Lead – Behavioural Marketing and Customer Insights",
-    title: "Behavioral Marketing & Consumer Psychology Specialist",
+    title: "Business Developer | Marketing Strategist | Social Psychologist",
     tagline: "Transforming consumer insights into strategic business advantage",
-    about: "Amanuel Melaku is a seasoned business development and marketing strategist with deep expertise in behavioral marketing and consumer psychology. He holds a Bachelor's degree in Marketing Management and a Master's degree in Social Psychology from Addis Ababa University. With a rich background spanning fintech, tech startups, and consulting, Amanuel has a proven track record of driving customer engagement, sales growth, and brand visibility. His strategic approach blends marketing with insights from social psychology, allowing him to craft compelling, value-driven customer experiences.",
+    about: "Amanuel Melaku is a results-driven professional blending expertise in business development, marketing strategy, and social psychology. With hands-on experience across fintech, consultancy, and startup environments, he leverages data, behavioral insights, and creativity to drive growth, optimize customer experiences, and build meaningful partnerships.",
+    contact: {
+      location: "Addis Ababa, Ethiopia",
+      email: "amanmelak@gmail.com",
+      phone: "+251 920 523 952"
+    },
     expertise: [
       {
         title: "Behavioral Marketing Strategy",
@@ -325,41 +331,48 @@ export const teamMembersData: Record<string, TeamMember> = {
     ],
     achievements: [
       {
-        title: "Fintech Customer Acquisition Strategy",
+        title: "Sales Manager – eQUB Financial Technologies (2024–Present)",
         points: [
-          "Developed behavioral marketing strategy increasing customer acquisition by 45%",
-          "Redesigned onboarding experience reducing abandonment rate by 30%",
-          "Implemented psychological triggers increasing customer referrals by 60%",
-          "Created behavioral segmentation model improving campaign targeting efficiency"
+          "Spearheaded sales strategy to grow market share and profitability",
+          "Led end-to-end marketing campaigns and trade show presence",
+          "Strengthened client engagement and satisfaction through tailored support",
+          "Oversaw brand consistency and digital marketing efforts"
         ]
       },
       {
-        title: "E-commerce Conversion Optimization",
+        title: "Business Relationship Officer – Moss ICT (2019–2021)",
         points: [
-          "Applied behavioral economics principles to increase checkout completion by 35%",
-          "Redesigned product descriptions based on psychological triggers, boosting sales by 28%",
-          "Implemented social proof mechanisms increasing new customer conversion by 40%",
-          "Created urgency-based marketing campaigns that improved seasonal sales by 53%"
+          "Developed client-focused plans to boost engagement and renewals",
+          "Strengthened B2B partnerships and represented the company in industry events",
+          "Led client feedback initiatives and introduced process improvements"
         ]
       },
       {
-        title: "Telecommunications Customer Retention",
+        title: "Startup Co-founder – Moko's Mobile App (2018–2021)",
         points: [
-          "Designed loyalty program based on behavioral psychology principles, reducing churn by 25%",
-          "Developed communication strategy that increased customer satisfaction scores by 38%",
-          "Created customer feedback loops that improved service delivery and reduced complaints",
-          "Implemented behavioral incentives that increased premium service adoption by 42%"
-        ]
-      },
-      {
-        title: "Financial Services Customer Research",
-        points: [
-          "Led qualitative research uncovering key emotional drivers in financial decision-making",
-          "Developed customer segmentation model based on psychological profiles and behaviors",
-          "Created financial education program aligned with behavioral change principles",
-          "Advised on service design improvements based on customer psychology insights"
+          "Directed business development and digital marketing efforts",
+          "Designed and executed multi-channel marketing strategies",
+          "Managed client acquisition, content creation, and brand visibility"
         ]
       }
+    ],
+    education: [
+      "Master's in Social Psychology (2021–2025)",
+      "BA in Marketing Management – Addis Ababa University"
+    ],
+    certifications: [
+      "Business Decision Making – IVEY, Western Ontario",
+      "Digital Marketing Fundamentals – Google/IAB Europe",
+      "Digital Marketing Course – Udemy (Ongoing)"
+    ],
+    keyStrengths: [
+      "Business Development & Strategic Sales",
+      "Consumer Behavior & Psychological Profiling",
+      "Psychology-Informed Market Strategy",
+      "Customer Relationship Management (CRM)",
+      "Social Media & Content Marketing",
+      "Research & Behavioral Insight",
+      "Communication, Presentation & Negotiation"
     ],
     philosophy: "Understanding the 'why' behind customer behaviors is the key to creating meaningful connections and sustainable growth. True marketing success comes from aligning business objectives with genuine human needs and motivations."
   }
