@@ -2,7 +2,7 @@
 import React from "react";
 import { TeamMember } from "./TeamMemberTypes";
 import { Button } from "@/components/ui/button";
-import { Target, BarChart, Globe, Brain, Rocket, ArrowLeft, MapPin, Mail, Phone, Award, GraduationCap, Certificate } from "lucide-react";
+import { Target, BarChart, Globe, Brain, Rocket, ArrowLeft, MapPin, Mail, Phone, Award, GraduationCap, Medal } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Accordion, 
@@ -213,7 +213,7 @@ const TeamMemberDetailRevised: React.FC<TeamMemberDetailRevisedProps> = ({ membe
                 {member.certifications && (
                   <div>
                     <div className="flex items-center mb-4">
-                      <Certificate size={24} className="text-[#3E92CC] mr-3" />
+                      <Medal size={24} className="text-[#3E92CC] mr-3" />
                       <h3 className="text-xl font-semibold text-[#0A2463]">Certifications</h3>
                     </div>
                     <ul className="space-y-3">
