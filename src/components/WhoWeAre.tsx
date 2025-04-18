@@ -1,8 +1,11 @@
 
 import React from "react";
 import TeamMember from "./TeamMember";
+import { useContentStore } from "@/stores/useContentStore";
 
 const WhoWeAre = () => {
+  const { teamMembers } = useContentStore();
+  
   return (
     <section id="team" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -18,22 +21,14 @@ const WhoWeAre = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <TeamMember 
-            name="Ebenezer Tesfaye" 
-            role="Director of Digital Innovation and Technology" 
-          />
-          <TeamMember 
-            name="Natnael Melaku" 
-            role="Director of Business Development and Partnership" 
-          />
-          <TeamMember 
-            name="Sosena Samson" 
-            role="Director of Marketing & Branding" 
-          />
-          <TeamMember 
-            name="Amanuel Melaku" 
-            role="Co-founder & Lead – Behavioural Marketing and Customer Insights" 
-          />
+          {teamMembers.map((member) => (
+            <TeamMember 
+              key={member.id}
+              name={member.name} 
+              role={member.role}
+              imageSrc={member.imageSrc}
+            />
+          ))}
         </div>
       </div>
     </section>
