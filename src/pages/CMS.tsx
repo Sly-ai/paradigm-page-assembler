@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,6 @@ import TeamEditor from "../components/cms/TeamEditor";
 import FooterEditor from "../components/cms/FooterEditor";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import LearnMoreEditor from "../components/cms/LearnMoreEditor";
 
 // Simple authentication state (in a real app, this would use a proper auth system)
 const CMS = () => {
@@ -100,11 +100,10 @@ const CMS = () => {
         </div>
         
         <Tabs defaultValue="mission" className="w-full">
-          <TabsList className="grid grid-cols-5 mb-8">
+          <TabsList className="grid grid-cols-4 mb-8">
             <TabsTrigger value="mission">Mission</TabsTrigger>
             <TabsTrigger value="services">Services</TabsTrigger>
             <TabsTrigger value="team">Team</TabsTrigger>
-            <TabsTrigger value="learn-more">Learn More</TabsTrigger>
             <TabsTrigger value="footer">Footer</TabsTrigger>
           </TabsList>
           
@@ -118,10 +117,6 @@ const CMS = () => {
           
           <TabsContent value="team" className="bg-white p-6 rounded-lg shadow-sm">
             <TeamEditor />
-          </TabsContent>
-          
-          <TabsContent value="learn-more" className="bg-white p-6 rounded-lg shadow-sm">
-            <LearnMoreEditor />
           </TabsContent>
           
           <TabsContent value="footer" className="bg-white p-6 rounded-lg shadow-sm">
